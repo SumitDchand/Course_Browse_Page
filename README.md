@@ -30,4 +30,4 @@ The project is implemented using **HTML**, **Tailwind CSS**, and **vanilla JavaS
 
 1. **Clone the repository**
    ```bash
-   git clone [your-github-repository-link]
+   git clone [https://github.com/SumitDchand/Course_Browse_Page]
