@@ -13,8 +13,8 @@ The project is implemented using **HTML**, **Tailwind CSS**, and **vanilla JavaS
 ---
 
 ## 🔗 Deliverables
-- **Hosted Page Link:** [Add your hosted page link here]  
-- **Video Walkthrough Link:** [Add your video walkthrough link here]  
+- **Hosted Page Link:** [[hosted page link](https://course-browse-page.vercel.app/)]  
+- **Video Walkthrough Link:** [[video walkthrough link](https://drive.google.com/drive/folders/1lXq0sZhdF72NnAO5U6l6MGuq9FnOvMCE)]  
 
 ---
 
