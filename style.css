@@ -1,0 +1,165 @@
+/* =============================================== */
+/* BASE & FONT STYLES                              */
+/* =============================================== */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #FEF7F7; /* A very light pinkish background */
+}
+
+.header-shadow {
+    box-shadow: 0px 7px 29px 0px rgba(100, 100, 111, 0.2);
+}
+
+.fontfamily {
+    font-family: 'Comic Neue', cursive;
+}
+
+/* =============================================== */
+/* GRADIENT & BUTTON STYLES                        */
+/* =============================================== */
+.gradient-section {
+  min-height: 100vh; /* full viewport height */
+  background: linear-gradient(
+    113.73deg,
+    rgba(242, 245, 255, 0.45) 1%,
+    rgba(237, 230, 255, 0.45) 98.92%
+  );
+}
+
+.course-link {
+  border-bottom: 2px solid;
+  border-image-source: linear-gradient(270deg, #FA127B 0%, #7110CC 87.02%);
+  border-image-slice: 1;
+}
+
+
+
+.hero-gradient {
+    background: linear-gradient(99.59deg, #330B5C 0.48%, #423374 97.1%);
+
+}
+
+.btn-gradient-pink {
+    background: linear-gradient(96.34deg, #57029C 14.72%, #F700AC 95.83%);
+
+    transition: all 0.3s ease;
+}
+.btn-gradient-pink:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(249, 119, 148, 0.4);
+}
+
+.btn-gradient-purple {
+     background: linear-gradient(96.34deg, #57029C 14.72%, #F700AC 95.83%);
+
+}
+
+/* =============================================== */
+/* CUSTOM COMPONENTS                               */
+/* =============================================== */
+/* Custom shadow for floating cards in hero section */
+.stat-card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 1rem;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.1);
+}
+
+/* =============================================== */
+/* FILTER STYLES                                   */
+/* =============================================== */
+/* Styling for active age filter */
+.age-filter.active {
+    color: white;
+    border-color: transparent;
+}
+.age-filter.active-yellow { background: #FFD400; }
+.age-filter.active-orange { background: #FF7B00; }
+.age-filter.active-pink { background: #F953E8; }
+.age-filter.active-green { background: #4ADE80; }
+.age-filter.active-sky { background: #08B3EC; }
+
+/* New border colors for age filters */
+/* .border-yellow-400 { border-color: #FBBF24; }
+.border-orange-400 { border-color: #FB923C; }
+.border-pink-400 { border-color: #F472B6; }
+.border-green-400 { border-color: #4ADE80; }
+.border-sky-400 { border-color: #38BDF8; } */
+
+
+
+/* Styling for popular category filters */
+.category-filter {
+    transition: all 0.3s ease;
+}
+.category-filter.active {
+    color: white;
+    box-shadow: 0 10px 20px -5px var(--tw-shadow-color);
+}
+.category-filter.active .category-text {
+    color: white;
+}
+.active.coding { background: linear-gradient(to right, #ff7e5f, #feb47b); --tw-shadow-color: rgba(255, 126, 95, 0.4); }
+.active.speaking { background: linear-gradient(to right, #22c55e, #16a34a); --tw-shadow-color: rgba(34, 197, 94, 0.4); }
+.active.chess { background: linear-gradient(to right, #facc15, #eab308); --tw-shadow-color: rgba(250, 204, 21, 0.4); }
+.active.homework { background: linear-gradient(to right, #38bdf8, #0ea5e9); --tw-shadow-color: rgba(56, 189, 248, 0.4); }
+.active.app { background: linear-gradient(to right, #f87171, #ef4444); --tw-shadow-color: rgba(248, 113, 113, 0.4); }
+
+/* Styling for time filters */
+.time-filter.active {
+    border-color: #60A5FA;
+    background-color: #EFF6FF;
+}
+.time-filter .icon-inactive { display: block; }
+.time-filter .icon-active { display: none; }
+.time-filter.active .icon-inactive { display: none; }
+.time-filter.active .icon-active { 
+    display: block;
+    animation: sun-rise 0.5s ease-out forwards;
+}
+
+/* =============================================== */
+/* ANIMATIONS                                      */
+/* =============================================== */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.fade-in-up {
+    animation: fadeInUp 0.8s ease-out forwards;
+}
+
+@keyframes sun-rise {
+    from {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* =============================================== */
+/* UTILITIES                                       */
+/* =============================================== */
+/* Hide scrollbar but allow scrolling */
+.no-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+.no-scrollbar {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+/* Smooth scrolling for carousels */
+.smooth-scroll {
+    scroll-behavior: smooth;
+}

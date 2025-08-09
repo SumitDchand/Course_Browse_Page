@@ -1,0 +1,1159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kids Learning Platform</title>
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts: Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue&display=swap" rel="stylesheet">
+
+    <!-- Link to your external stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="text-gray-800">
+
+    <!-- =============================================== -->
+    <!-- HEADER & NAVIGATION                             -->
+    <!-- =============================================== -->
+    <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-sm border-b header-shadow">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-[116px]">
+            <div class="flex items-center justify-between h-[76px]">
+                <!-- Left Side: Logo & Navigation -->
+                <div class="flex items-center space-x-8">
+                    <!-- Logo -->
+                    <a href="#" class="text-2xl font-bold text-[#090909] ">Logo</a>
+                    <!-- Desktop Navigation -->
+                    <nav class="hidden lg:flex items-center">
+                        <a href="#" class="px-4 py-2 text-purple-600 font-semibold course-link">Course</a>
+                    </nav>
+                </div>
+
+                <!-- Right Side: Auth Buttons (Desktop) -->
+                <div class="hidden lg:flex items-center space-x-4">
+                    <a href="#" class="px-6 py-2 rounded-lg font-semibold text-gray-700 hover:bg-gray-100 transition">Login</a>
+                    <a href="#" class="px-6 py-2 rounded-full font-semibold text-white btn-gradient-purple">Register for free</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="lg:hidden">
+                    <button id="menu-btn" class="text-gray-700 focus:outline-none">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- =============================================== -->
+    <!-- MAIN CONTENT                                    -->
+    <!-- =============================================== -->
+    <main>
+        <!-- =============================================== -->
+        <!-- HERO SECTION                                    -->
+        <!-- =============================================== -->
+       <section class="hero-gradient text-white relative min-h-[506px] flex items-center justify-center overflow-hidden">
+    <!-- Boy Image - Positioned absolutely to the left edge -->
+    <div class="absolute bottom-0 left-0 w-1/2 md:w-1/3 lg:w-[26rem] h-auto z-10 fade-in-up">
+        <img src="./assets/boy.png" alt="Boy with magnifying glass" class="w-full h-full object-contain" onerror="this.onerror=null;this.src='https://i.imgur.com/uV5rF2s.png';">
+    </div>
+
+    <!-- Girl Image - Positioned absolutely to the right edge -->
+    <div class="absolute bottom-0 right-0 w-1/2 md:w-1/3 lg:w-[35rem] h-auto z-10 fade-in-up" style="animation-delay: 0.2s;">
+        <img src="./assets/girl.png" alt="Girl reading a book" class="w-full h-full object-contain" onerror="this.onerror=null;this.src='https://i.imgur.com/8z2eJ3D.png';">
+    </div>
+
+    <!-- Centered Content Container -->
+    <div class="container mx-auto px-4 lg:px-8 relative z-20">
+        <!-- Hero Content -->
+        <div class="text-center">
+            <h1 class=" fontfamily text-4xl md:text-5xl lg:text-6xl font-bold leading-tight fade-in-up">
+                Learn a New Skill<br>
+                <span class=" font-semibold text-[#F2FA5C] px-2 rounded-md">Everyday, Anytime, and Anywhere.</span>
+            </h1>
+            <div class="mt-12 max-w-2xl mx-auto fade-in-up" style="animation-delay: 0.3s;">
+                <div class="flex items-center bg-white/90 p-2 rounded-full shadow-lg">
+                    <svg class="w-6 h-6 text-gray-400 mx-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+                    <input type="text" placeholder="What do you want to learn today?" class="w-full bg-transparent text-gray-700 placeholder-gray-500 focus:outline-none">
+                    <button class="px-8 py-3 rounded-full font-semibold text-white btn-gradient-pink flex-shrink-0">Search</button>
+                </div>
+            </div>
+        </div>
+    </div>    
+
+    <!-- Floating Stats Container - This now sits on top of everything to allow positioning relative to the whole section -->
+    <div class="absolute inset-0 w-full h-full z-30 pointer-events-none">
+        <div class="container mx-auto h-full relative">
+            <!-- 500+ Courses -->
+            <div class="absolute top-[4rem] left-[6rem] w-24 h-24 fade-in-up" style="animation-delay: 0.4s;">
+                <div class="stat-card w-full h-full rounded-full flex flex-col items-center justify-center">
+                    <p class="text-2xl font-bold">500+</p>
+                    <p class="text-sm">Courses</p>
+                </div>
+            </div>
+
+            <!-- 10K+ Happy Kids -->
+            <div class="absolute top-[7rem] right-[-5rem] fade-in-up" style="animation-delay: 0.5s;">
+                <div class="stat-card p-3 px-4 rounded-full text-center">
+                    <div class="flex items-center justify-center space-x-2">
+                       <img src="./assets/happy-life.gif" alt="happ_emoji" class="h-12 w-12">
+                       <div class="text-center">
+                           <p class="text-2xl font-bold leading-none">10K+</p>
+                           <p class="text-sm">Happy Kids</p>
+                           </div>
+                    </div>
+                    
+                </div>
+            </div>
+
+            <!-- 4.9 Rating -->
+             <div class="absolute bottom-[2rem] left-[12rem] fade-in-up" style="animation-delay: 0.6s;">
+                <div class="stat-card p-3 px-6 rounded-full flex items-center justify-center space-x-2">
+                    <img src="./assets/hand.gif" alt="Rating hand" class="h-12 w-12">
+                   <div class="text-center">
+                    <p class="text-xl font-bold leading-none">4.9</p>
+                    <p class="text-sm">Rating</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</section>
+
+        <div class="gradient-section pt-5 pb-1">
+            <!-- =============================================== -->
+            <!-- AGE SELECTION SECTION                           -->
+            <!-- =============================================== -->
+            <section class="py-20 ">
+                <div class="container mx-auto px-4 lg:px-8 text-center">
+                    <h2 class="text-3xl md:text-4xl font-normal mb-4">How Old Are You? 🎯</h2>
+                    <p class="text-gray-600 mb-10">Pick your age and find the perfect courses just for you!</p>
+
+                    <div id="age-filters" class="flex flex-wrap justify-center lg:flex-nowrap lg:overflow-x-auto gap-2  no-scrollbar py-4">
+                        <!-- Age filters will be generated by JS -->
+                    </div>
+                </div>
+            </section>
+
+            <!-- =============================================== -->
+            <!-- NEW LAUNCHES SECTION                            -->
+            <!-- =============================================== -->
+            <section class="pb-10 pt-5">
+                <div class="container mx-auto px-4 lg:px-8">
+                    <div class="text-center mb-12">
+                        <h2 class="text-3xl md:text-4xl font-bold mb-4">New Launches ⭐</h2>
+                        <p class="text-gray-600">Our most loved courses that kids absolutely adore!</p>
+                    </div>
+                    <div class="relative">
+                    <div id="new-launches-carousel" class="flex overflow-x-auto space-x-8 pb-4 no-scrollbar smooth-scroll">
+                        <!-- Course Card 1 -->
+                        <div class="flex-shrink-0 w-80 bg-white rounded-2xl shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300">
+                            <div class="relative">
+                                <img src="./assets/learningROBOTICS.jpg" alt="Robotics Course" class="w-full h-40 object-cover" onerror="this.onerror=null;this.src='https://placehold.co/600x400/E9D8FD/6B46C1?text=Robotics';">
+                                <div class="absolute top-2 left-2 bg-yellow-400 text-gray-800 text-xs font-bold px-2 py-1 rounded-md">Selling Fast</div>
+                                <div class="absolute top-2 right-2 bg-black/30 text-white text-xs px-2 py-1 rounded-full">⭐ 4.9 | 200+ learners</div>
+                            </div>
+                            <div class="p-4">
+                                <div class="flex space-x-2 mb-2">
+                                    <span class="bg-purple-100 text-purple-700 text-xs font-semibold px-2.5 py-1 rounded-full">English</span>
+                                    <span class="bg-green-100 text-green-700 text-xs font-semibold px-2.5 py-1 rounded-full">Intermediate</span>
+                                    <span class="bg-pink-100 text-pink-700 text-xs font-semibold px-2.5 py-1 rounded-full">4 classes</span>
+                                </div>
+                                <h3 class="font-bold text-lg mb-1">Summer robotics camp: fun projects with auto arduino, Tink...</h3>
+                                <p class="text-sm text-gray-500 mb-3">Build circuits & smart projects like alarms, weather stations, etc</p>
+                                <div class="flex justify-between items-center text-sm ">
+                                    <div class="flex items-center gap-4 font-medium text-base">
+                                    <span class="flex items-center"><img src="./assets/person.svg" class="w-4 h-4 mr-1"> 7-10 yrs</span>
+                                    <span class="flex items-center"><img src="./assets/clock.svg" class="w-4 h-4 mr-1"> 45</span>
+                                    <span class="flex items-center "><img src="./assets/Rupee.svg" class="w-4 h-4 mr-1">299</span>
+                                    </div>    
+                                        <button class="p-1 rounded-full bg-gray-100 transition">
+                                            <img src="./assets/cart.svg" class="w-8 h-8 ">
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+                            <!-- Course Card 2 -->
+                            <div class="flex-shrink-0 w-80 bg-white rounded-2xl shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300">
+                                <div class="relative">
+                                    <img src="./assets/learningROBOTICS.jpg" alt="Robotics Course" class="w-full h-40 object-cover" onerror="this.onerror=null;this.src='https://placehold.co/600x400/E9D8FD/6B46C1?text=Robotics';">
+                                    <div class="absolute top-2 left-2 bg-yellow-400 text-gray-800 text-xs font-bold px-2 py-1 rounded-md">Selling Fast</div>
+                                    <div class="absolute top-2 right-2 bg-black/30 text-white text-xs px-2 py-1 rounded-full">⭐ 4.9 | 200+ learners</div>
+                                </div>
+                                <div class="p-4">
+                                    <div class="flex space-x-2 mb-2">
+                                        <span class="bg-purple-100 text-purple-700 text-xs font-semibold px-2.5 py-1 rounded-full">English</span>
+                                        <span class="bg-green-100 text-green-700 text-xs font-semibold px-2.5 py-1 rounded-full">Intermediate</span>
+                                        <span class="bg-pink-100 text-pink-700 text-xs font-semibold px-2.5 py-1 rounded-full">4 classes</span>
+                                    </div>
+                                    <h3 class="font-bold text-lg mb-1">Summer robotics camp: fun projects with auto arduino, Tink...</h3>
+                                    <p class="text-sm text-gray-500 mb-3">Build circuits & smart projects like alarms, weather stations, etc</p>
+                                    <div class="flex justify-between items-center text-sm ">
+                                        <div class="flex items-center gap-4 font-medium text-base">
+                                        <span class="flex items-center"><img src="./assets/person.svg" class="w-4 h-4 mr-1"> 7-10 yrs</span>
+                                        <span class="flex items-center"><img src="./assets/clock.svg" class="w-4 h-4 mr-1"> 45</span>
+                                        <span class="flex items-center "><img src="./assets/Rupee.svg" class="w-4 h-4 mr-1">299</span>
+                                        </div>    
+                                            <button class="p-1 rounded-full bg-gray-100 transition">
+                                                <img src="./assets/cart.svg" class="w-8 h-8 ">
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <!-- Course Card 3 -->
+                                <div class="flex-shrink-0 w-80 bg-white rounded-2xl shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300">
+                                    <div class="relative">
+                                        <img src="./assets/learningROBOTICS.jpg" alt="Robotics Course" class="w-full h-40 object-cover" onerror="this.onerror=null;this.src='https://placehold.co/600x400/E9D8FD/6B46C1?text=Robotics';">
+                                        <div class="absolute top-2 left-2 bg-yellow-400 text-gray-800 text-xs font-bold px-2 py-1 rounded-md">Selling Fast</div>
+                                        <div class="absolute top-2 right-2 bg-black/30 text-white text-xs px-2 py-1 rounded-full">⭐ 4.9 | 200+ learners</div>
+                                    </div>
+                                    <div class="p-4">
+                                        <div class="flex space-x-2 mb-2">
+                                            <span class="bg-purple-100 text-purple-700 text-xs font-semibold px-2.5 py-1 rounded-full">English</span>
+                                            <span class="bg-green-100 text-green-700 text-xs font-semibold px-2.5 py-1 rounded-full">Intermediate</span>
+                                            <span class="bg-pink-100 text-pink-700 text-xs font-semibold px-2.5 py-1 rounded-full">4 classes</span>
+                                        </div>
+                                        <h3 class="font-bold text-lg mb-1">Summer robotics camp: fun projects with auto arduino, Tink...</h3>
+                                        <p class="text-sm text-gray-500 mb-3">Build circuits & smart projects like alarms, weather stations, etc</p>
+                                        <div class="flex justify-between items-center text-sm ">
+                                            <div class="flex items-center gap-4 font-medium text-base">
+                                            <span class="flex items-center"><img src="./assets/person.svg" class="w-4 h-4 mr-1"> 7-10 yrs</span>
+                                            <span class="flex items-center"><img src="./assets/clock.svg" class="w-4 h-4 mr-1"> 45</span>
+                                            <span class="flex items-center "><img src="./assets/Rupee.svg" class="w-4 h-4 mr-1">299</span>
+                                            </div>    
+                                                <button class="p-1 rounded-full bg-gray-100 transition">
+                                                    <img src="./assets/cart.svg" class="w-8 h-8 ">
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                    <!-- Course Card 4 -->
+                                    <div class="flex-shrink-0 w-80 bg-white rounded-2xl shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300">
+                                        <div class="relative">
+                                            <img src="./assets/learningROBOTICS.jpg" alt="Robotics Course" class="w-full h-40 object-cover" onerror="this.onerror=null;this.src='https://placehold.co/600x400/E9D8FD/6B46C1?text=Robotics';">
+                                            <div class="absolute top-2 left-2 bg-yellow-400 text-gray-800 text-xs font-bold px-2 py-1 rounded-md">Selling Fast</div>
+                                            <div class="absolute top-2 right-2 bg-black/30 text-white text-xs px-2 py-1 rounded-full">⭐ 4.9 | 200+ learners</div>
+                                        </div>
+                                        <div class="p-4">
+                                            <div class="flex space-x-2 mb-2">
+                                                <span class="bg-purple-100 text-purple-700 text-xs font-semibold px-2.5 py-1 rounded-full">English</span>
+                                                <span class="bg-green-100 text-green-700 text-xs font-semibold px-2.5 py-1 rounded-full">Intermediate</span>
+                                                <span class="bg-pink-100 text-pink-700 text-xs font-semibold px-2.5 py-1 rounded-full">4 classes</span>
+                                            </div>
+                                            <h3 class="font-bold text-lg mb-1">Summer robotics camp: fun projects with auto arduino, Tink...</h3>
+                                            <p class="text-sm text-gray-500 mb-3">Build circuits & smart projects like alarms, weather stations, etc</p>
+                                            <div class="flex justify-between items-center text-sm ">
+                                                <div class="flex items-center gap-4 font-medium text-base">
+                                                <span class="flex items-center"><img src="./assets/person.svg" class="w-4 h-4 mr-1"> 7-10 yrs</span>
+                                                <span class="flex items-center"><img src="./assets/clock.svg" class="w-4 h-4 mr-1"> 45</span>
+                                                <span class="flex items-center "><img src="./assets/Rupee.svg" class="w-4 h-4 mr-1">299</span>
+                                                </div>    
+                                                    <button class="p-1 rounded-full bg-gray-100 transition">
+                                                        <img src="./assets/cart.svg" class="w-8 h-8 ">
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+                                        <!-- Course Card 5 -->
+                                    <div class="flex-shrink-0 w-80 bg-white rounded-2xl shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300">
+                                        <div class="relative">
+                                            <img src="./assets/learningROBOTICS.jpg" alt="Robotics Course" class="w-full h-40 object-cover" onerror="this.onerror=null;this.src='https://placehold.co/600x400/E9D8FD/6B46C1?text=Robotics';">
+                                            <div class="absolute top-2 left-2 bg-yellow-400 text-gray-800 text-xs font-bold px-2 py-1 rounded-md">Selling Fast</div>
+                                            <div class="absolute top-2 right-2 bg-black/30 text-white text-xs px-2 py-1 rounded-full">⭐ 4.9 | 200+ learners</div>
+                                        </div>
+                                        <div class="p-4">
+                                            <div class="flex space-x-2 mb-2">
+                                                <span class="bg-purple-100 text-purple-700 text-xs font-semibold px-2.5 py-1 rounded-full">English</span>
+                                                <span class="bg-green-100 text-green-700 text-xs font-semibold px-2.5 py-1 rounded-full">Intermediate</span>
+                                                <span class="bg-pink-100 text-pink-700 text-xs font-semibold px-2.5 py-1 rounded-full">4 classes</span>
+                                            </div>
+                                            <h3 class="font-bold text-lg mb-1">Summer robotics camp: fun projects with auto arduino, Tink...</h3>
+                                            <p class="text-sm text-gray-500 mb-3">Build circuits & smart projects like alarms, weather stations, etc</p>
+                                            <div class="flex justify-between items-center text-sm ">
+                                                <div class="flex items-center gap-4 font-medium text-base">
+                                                <span class="flex items-center"><img src="./assets/person.svg" class="w-4 h-4 mr-1"> 7-10 yrs</span>
+                                                <span class="flex items-center"><img src="./assets/clock.svg" class="w-4 h-4 mr-1"> 45</span>
+                                                <span class="flex items-center "><img src="./assets/Rupee.svg" class="w-4 h-4 mr-1">299</span>
+                                                </div>    
+                                                    <button class="p-1 rounded-full bg-gray-100 transition">
+                                                        <img src="./assets/cart.svg" class="w-8 h-8 ">
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+                                    <!-- Add more cards here -->
+                                    <!-- ---- -->  
+
+                                    </div>
+                                    <button id="new-launches-next" class="absolute top-1/2 right-0 transform -translate-y-1/2 bg-white rounded-full w-12 h-12 flex items-center justify-center shadow-lg z-10 hover:bg-gray-100 transition">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-700" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+                                    </button>
+                                    <div class="absolute top-0 right-0 h-full w-24 bg-gradient-to-l from-white to-transparent pointer-events-none"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+            <!-- =============================================== -->
+            <!-- FEATURED COURSES SECTION                        -->
+            <!-- =============================================== -->
+            <section class="pb-20 pt-5">
+                <div class="container mx-auto px-4 lg:px-8">
+                    <div class="text-center mb-12">
+                        <h2 class="text-3xl md:text-4xl font-bold mb-4">Featured Courses ⭐</h2>
+                        <p class="text-gray-600">Our most loved courses that kids absolutely adore!</p>
+                    </div>
+                    <div class="relative">
+                     <div id="featured-courses-carousel" class="flex overflow-x-auto space-x-8 pb-4 no-scrollbar">
+                        <!-- Re-using the same card structure 1 -->
+                        <div class="flex-shrink-0 w-80 bg-white rounded-2xl shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300">
+                            <div class="relative">
+                                <img src="./assets/learningROBOTICS.jpg" alt="Robotics Course" class="w-full h-40 object-cover" onerror="this.onerror=null;this.src='https://placehold.co/600x400/E9D8FD/6B46C1?text=Robotics';">
+                                <div class="absolute top-2 left-2 bg-yellow-400 text-gray-800 text-xs font-bold px-2 py-1 rounded-md">Selling Fast</div>
+                                <div class="absolute top-2 right-2 bg-black/30 text-white text-xs px-2 py-1 rounded-full">⭐ 4.9 | 300+ learners</div>
+                            </div>
+                            <div class="p-4">
+                                <div class="flex space-x-2 mb-2">
+                                    <span class="bg-purple-100 text-purple-700 text-xs font-semibold px-2.5 py-1 rounded-full">English</span>
+                                    <span class="bg-green-100 text-green-700 text-xs font-semibold px-2.5 py-1 rounded-full">Intermediate</span>
+                                    <span class="bg-pink-100 text-pink-700 text-xs font-semibold px-2.5 py-1 rounded-full">4 classes</span>
+                                </div>
+                                <h3 class="font-bold text-lg mb-1">Summer robotics camp: fun projects with auto arduino, Tink...</h3>
+                                <div class=" flex flex-row">
+                                    <img src="./assets/daniel.png" class="w-6 h-6 rounded-full mr-2">
+                                <p class="text-sm text-gray-500 mb-3">By: Daniel James</p>
+                                </div>
+
+                                <div class="flex justify-between items-center text-sm ">
+                                                <div class="flex items-center gap-4 font-medium text-base">
+                                                <span class="flex items-center"><img src="./assets/person.svg" class="w-4 h-4 mr-1"> 7-10 yrs</span>
+                                                <span class="flex items-center"><img src="./assets/clock.svg" class="w-4 h-4 mr-1"> 45</span>
+                                                <span class="flex items-center "><img src="./assets/Rupee.svg" class="w-4 h-4 mr-1">299</span>
+                                                </div>    
+                                                    <button class="p-1 rounded-full bg-gray-100 transition">
+                                                        <img src="./assets/cart.svg" class="w-8 h-8 ">
+                                                    </button>
+                                                </div>
+                                
+                            </div>
+                        </div>
+                        <!-- Add more cards here -->
+                         <!-- card structure 2 -->
+                         <div class="flex-shrink-0 w-80 bg-white rounded-2xl shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300">
+                            <div class="relative">
+                                <img src="./assets/learningROBOTICS.jpg" alt="Robotics Course" class="w-full h-40 object-cover" onerror="this.onerror=null;this.src='https://placehold.co/600x400/E9D8FD/6B46C1?text=Robotics';">
+                                <!-- <div class="absolute top-2 left-2 bg-yellow-400 text-gray-800 text-xs font-bold px-2 py-1 rounded-md">Selling Fast</div> -->
+                                <div class="absolute top-2 right-2 bg-black/30 text-white text-xs px-2 py-1 rounded-full">⭐ 4.9 | 300+ learners</div>
+                            </div>
+                            <div class="p-4">
+                                <div class="flex space-x-2 mb-2">
+                                    <span class="bg-purple-100 text-purple-700 text-xs font-semibold px-2.5 py-1 rounded-full">English</span>
+                                    <span class="bg-green-100 text-green-700 text-xs font-semibold px-2.5 py-1 rounded-full">Intermediate</span>
+                                    <span class="bg-pink-100 text-pink-700 text-xs font-semibold px-2.5 py-1 rounded-full">4 classes</span>
+                                </div>
+                                <h3 class="font-bold text-lg mb-1">Summer robotics camp: fun projects with auto arduino, Tink...</h3>
+                                <div class=" flex flex-row">
+                                    <img src="./assets/daniel.png" class="w-6 h-6 rounded-full mr-2">
+                                <p class="text-sm text-gray-500 mb-3">By: Daniel James</p>
+                                </div>
+
+                                <div class="flex justify-between items-center text-sm ">
+                                                <div class="flex items-center gap-4 font-medium text-base">
+                                                <span class="flex items-center"><img src="./assets/person.svg" class="w-4 h-4 mr-1"> 7-10 yrs</span>
+                                                <span class="flex items-center"><img src="./assets/clock.svg" class="w-4 h-4 mr-1"> 45</span>
+                                                <span class="flex items-center "><img src="./assets/Rupee.svg" class="w-4 h-4 mr-1">299</span>
+                                                </div>    
+                                                    <button class="p-1 rounded-full bg-gray-100 transition">
+                                                        <img src="./assets/cart.svg" class="w-8 h-8 ">
+                                                    </button>
+                                                </div>
+                                
+                            </div>
+                        </div>
+
+
+                        <!-- card structure 3 -->
+                         <div class="flex-shrink-0 w-80 bg-white rounded-2xl shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300">
+                            <div class="relative">
+                                <img src="./assets/learningROBOTICS.jpg" alt="Robotics Course" class="w-full h-40 object-cover" onerror="this.onerror=null;this.src='https://placehold.co/600x400/E9D8FD/6B46C1?text=Robotics';">
+                                <!-- <div class="absolute top-2 left-2 bg-yellow-400 text-gray-800 text-xs font-bold px-2 py-1 rounded-md">Selling Fast</div> -->
+                                <div class="absolute top-2 right-2 bg-black/30 text-white text-xs px-2 py-1 rounded-full">⭐ 4.9 | 300+ learners</div>
+                            </div>
+                            <div class="p-4">
+                                <div class="flex space-x-2 mb-2">
+                                    <span class="bg-purple-100 text-purple-700 text-xs font-semibold px-2.5 py-1 rounded-full">English</span>
+                                    <span class="bg-green-100 text-green-700 text-xs font-semibold px-2.5 py-1 rounded-full">Intermediate</span>
+                                    <span class="bg-pink-100 text-pink-700 text-xs font-semibold px-2.5 py-1 rounded-full">4 classes</span>
+                                </div>
+                                <h3 class="font-bold text-lg mb-1">Summer robotics camp: fun projects with auto arduino, Tink...</h3>
+                                <div class=" flex flex-row">
+                                    <img src="./assets/daniel.png" class="w-6 h-6 rounded-full mr-2">
+                                <p class="text-sm text-gray-500 mb-3">By: Daniel James</p>
+                                </div>
+
+                                <div class="flex justify-between items-center text-sm ">
+                                                <div class="flex items-center gap-4 font-medium text-base">
+                                                <span class="flex items-center"><img src="./assets/person.svg" class="w-4 h-4 mr-1"> 7-10 yrs</span>
+                                                <span class="flex items-center"><img src="./assets/clock.svg" class="w-4 h-4 mr-1"> 45</span>
+                                                <span class="flex items-center "><img src="./assets/Rupee.svg" class="w-4 h-4 mr-1">299</span>
+                                                </div>    
+                                                    <button class="p-1 rounded-full bg-gray-100 transition">
+                                                        <img src="./assets/cart.svg" class="w-8 h-8 ">
+                                                    </button>
+                                                </div>
+                                
+                            </div>
+                        </div>
+
+                        <!-- card structure 4 -->
+                         <div class="flex-shrink-0 w-80 bg-white rounded-2xl shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300">
+                            <div class="relative">
+                                <img src="./assets/learningROBOTICS.jpg" alt="Robotics Course" class="w-full h-40 object-cover" onerror="this.onerror=null;this.src='https://placehold.co/600x400/E9D8FD/6B46C1?text=Robotics';">
+                                <!-- <div class="absolute top-2 left-2 bg-yellow-400 text-gray-800 text-xs font-bold px-2 py-1 rounded-md">Selling Fast</div> -->
+                                <div class="absolute top-2 right-2 bg-black/30 text-white text-xs px-2 py-1 rounded-full">⭐ 4.9 | 300+ learners</div>
+                            </div>
+                            <div class="p-4">
+                                <div class="flex space-x-2 mb-2">
+                                    <span class="bg-purple-100 text-purple-700 text-xs font-semibold px-2.5 py-1 rounded-full">English</span>
+                                    <span class="bg-green-100 text-green-700 text-xs font-semibold px-2.5 py-1 rounded-full">Intermediate</span>
+                                    <span class="bg-pink-100 text-pink-700 text-xs font-semibold px-2.5 py-1 rounded-full">4 classes</span>
+                                </div>
+                                <h3 class="font-bold text-lg mb-1">Summer robotics camp: fun projects with auto arduino, Tink...</h3>
+                                <div class=" flex flex-row">
+                                    <img src="./assets/daniel.png" class="w-6 h-6 rounded-full mr-2">
+                                <p class="text-sm text-gray-500 mb-3">By: Daniel James</p>
+                                </div>
+
+                                <div class="flex justify-between items-center text-sm ">
+                                                <div class="flex items-center gap-4 font-medium text-base">
+                                                <span class="flex items-center"><img src="./assets/person.svg" class="w-4 h-4 mr-1"> 7-10 yrs</span>
+                                                <span class="flex items-center"><img src="./assets/clock.svg" class="w-4 h-4 mr-1"> 45</span>
+                                                <span class="flex items-center "><img src="./assets/Rupee.svg" class="w-4 h-4 mr-1">299</span>
+                                                </div>    
+                                                    <button class="p-1 rounded-full bg-gray-100 transition">
+                                                        <img src="./assets/cart.svg" class="w-8 h-8 ">
+                                                    </button>
+                                                </div>
+                                
+                            </div>
+                        </div>
+
+                        <!-- card structure 5 -->
+                         <div class="flex-shrink-0 w-80 bg-white rounded-2xl shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300">
+                            <div class="relative">
+                                <img src="./assets/learningROBOTICS.jpg" alt="Robotics Course" class="w-full h-40 object-cover" onerror="this.onerror=null;this.src='https://placehold.co/600x400/E9D8FD/6B46C1?text=Robotics';">
+                                <!-- <div class="absolute top-2 left-2 bg-yellow-400 text-gray-800 text-xs font-bold px-2 py-1 rounded-md">Selling Fast</div> -->
+                                <div class="absolute top-2 right-2 bg-black/30 text-white text-xs px-2 py-1 rounded-full">⭐ 4.9 | 300+ learners</div>
+                            </div>
+                            <div class="p-4">
+                                <div class="flex space-x-2 mb-2">
+                                    <span class="bg-purple-100 text-purple-700 text-xs font-semibold px-2.5 py-1 rounded-full">English</span>
+                                    <span class="bg-green-100 text-green-700 text-xs font-semibold px-2.5 py-1 rounded-full">Intermediate</span>
+                                    <span class="bg-pink-100 text-pink-700 text-xs font-semibold px-2.5 py-1 rounded-full">4 classes</span>
+                                </div>
+                                <h3 class="font-bold text-lg mb-1">Summer robotics camp: fun projects with auto arduino, Tink...</h3>
+                                <div class=" flex flex-row">
+                                    <img src="./assets/daniel.png" class="w-6 h-6 rounded-full mr-2">
+                                <p class="text-sm text-gray-500 mb-3">By: Daniel James</p>
+                                </div>
+
+                                <div class="flex justify-between items-center text-sm ">
+                                                <div class="flex items-center gap-4 font-medium text-base">
+                                                <span class="flex items-center"><img src="./assets/person.svg" class="w-4 h-4 mr-1"> 7-10 yrs</span>
+                                                <span class="flex items-center"><img src="./assets/clock.svg" class="w-4 h-4 mr-1"> 45</span>
+                                                <span class="flex items-center "><img src="./assets/Rupee.svg" class="w-4 h-4 mr-1">299</span>
+                                                </div>    
+                                                    <button class="p-1 rounded-full bg-gray-100 transition">
+                                                        <img src="./assets/cart.svg" class="w-8 h-8 ">
+                                                    </button>
+                                                </div>
+                                
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <button id="featured-courses-next" class="absolute top-1/2 right-0 transform -translate-y-1/2 bg-white rounded-full w-12 h-12 flex items-center justify-center shadow-lg z-10 hover:bg-gray-100 transition">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-700" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+                        </button>
+                        <div class="absolute top-0 right-0 h-full w-24 bg-gradient-to-l from-white to-transparent pointer-events-none"></div>
+                        </div>
+                </div>
+            </section>
+
+            <!-- =============================================== -->
+            <!-- TOP TEACHERS SECTION                            -->
+            <!-- =============================================== -->
+            <section class="pb-20 pt-5">
+                <div class="container mx-auto px-4 lg:px-8">
+                    <div class="text-center mb-12">
+                        <h2 class="text-3xl md:text-4xl font-bold mb-4">Learn from Top Teachers</h2>
+                        <p class="text-gray-600">Expert instructors who make learning fun and engaging for every child</p>
+                    </div>
+                    <div class="flex overflow-x-auto space-x-8 pb-4 no-scrollbar">
+                        <!-- Teacher Card 1 -->
+                        <div class="text-center flex-shrink-0 w-48 pt-16">
+                            <div class="relative">
+                                <img src="./assets/face.png" alt="Teacher Andy Brew" class="absolute -top-16 left-1/2 transform -translate-x-1/2 w-32 h-32 rounded-full shadow-lg" onerror="this.onerror=null;this.src='https://placehold.co/128x128/E9D8FD/6B46C1?text=AB';">
+                                <div class="bg-white rounded-2xl shadow-lg pt-20 p-4">
+                                    <h3 class="font-bold text-lg">Andy Brew</h3>
+                                    <p class="text-xs text-gray-500">M.Sc, B.Ed | 15+ Years</p>
+                                    <p class="text-xs text-gray-500 mb-2">1000+ Students</p>
+                                    <span class="bg-gray-200 text-gray-700 text-xs font-semibold px-3 py-1 rounded-full">Computer science</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Teacher Card 2 -->
+                        <div class="text-center flex-shrink-0 w-48 pt-16">
+                            <div class="relative">
+                                <img src="./assets/face.png" alt="Teacher Andy Brew" class="absolute -top-16 left-1/2 transform -translate-x-1/2 w-32 h-32 rounded-full shadow-lg" onerror="this.onerror=null;this.src='https://placehold.co/128x128/E9D8FD/6B46C1?text=AB';">
+                                <div class="bg-white rounded-2xl shadow-lg pt-20 p-4">
+                                    <h3 class="font-bold text-lg">Andy Brew</h3>
+                                    <p class="text-xs text-gray-500">M.Sc, B.Ed | 15+ Years</p>
+                                    <p class="text-xs text-gray-500 mb-2">1000+ Students</p>
+                                    <span class="bg-gray-200 text-gray-700 text-xs font-semibold px-3 py-1 rounded-full">English</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Teacher Card 3 -->
+                        <div class="text-center flex-shrink-0 w-48 pt-16">
+                            <div class="relative">
+                                <img src="./assets/face.png" alt="Teacher Andy Brew" class="absolute -top-16 left-1/2 transform -translate-x-1/2 w-32 h-32 rounded-full shadow-lg" onerror="this.onerror=null;this.src='https://placehold.co/128x128/E9D8FD/6B46C1?text=AB';">
+                                <div class="bg-white rounded-2xl shadow-lg pt-20 p-4">
+                                    <h3 class="font-bold text-lg">Andy Brew</h3>
+                                    <p class="text-xs text-gray-500">M.Sc, B.Ed | 15+ Years</p>
+                                    <p class="text-xs text-gray-500 mb-2">1000+ Students</p>
+                                    <span class="bg-gray-200 text-gray-700 text-xs font-semibold px-3 py-1 rounded-full">English</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Teacher Card 4 -->
+                        <div class="text-center flex-shrink-0 w-48 pt-16">
+                            <div class="relative">
+                                <img src="./assets/face.png" alt="Teacher Andy Brew" class="absolute -top-16 left-1/2 transform -translate-x-1/2 w-32 h-32 rounded-full shadow-lg" onerror="this.onerror=null;this.src='https://placehold.co/128x128/E9D8FD/6B46C1?text=AB';">
+                                <div class="bg-white rounded-2xl shadow-lg pt-20 p-4">
+                                    <h3 class="font-bold text-lg">Andy Brew</h3>
+                                    <p class="text-xs text-gray-500">M.Sc, B.Ed | 15+ Years</p>
+                                    <p class="text-xs text-gray-500 mb-2">1000+ Students</p>
+                                    <span class="bg-gray-200 text-gray-700 text-xs font-semibold px-3 py-1 rounded-full">Early educator</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Teacher Card 5 -->
+                        <div class="text-center flex-shrink-0 w-48 pt-16">
+                            <div class="relative">
+                                <img src="./assets/face.png" alt="Teacher Andy Brew" class="absolute -top-16 left-1/2 transform -translate-x-1/2 w-32 h-32 rounded-full shadow-lg" onerror="this.onerror=null;this.src='https://placehold.co/128x128/E9D8FD/6B46C1?text=AB';">
+                                <div class="bg-white rounded-2xl shadow-lg pt-20 p-4">
+                                    <h3 class="font-bold text-lg">Andy Brew</h3>
+                                    <p class="text-xs text-gray-500">M.Sc, B.Ed | 15+ Years</p>
+                                    <p class="text-xs text-gray-500 mb-2">1000+ Students</p>
+                                    <span class="bg-gray-200 text-gray-700 text-xs font-semibold px-3 py-1 rounded-full">English</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Teacher Card 6 -->
+                        <div class="text-center flex-shrink-0 w-48 pt-16">
+                            <div class="relative">
+                                <img src="./assets/face.png" alt="Teacher Andy Brew" class="absolute -top-16 left-1/2 transform -translate-x-1/2 w-32 h-32 rounded-full shadow-lg" onerror="this.onerror=null;this.src='https://placehold.co/128x128/E9D8FD/6B46C1?text=AB';">
+                                <div class="bg-white rounded-2xl shadow-lg pt-20 p-4">
+                                    <h3 class="font-bold text-lg">Andy Brew</h3>
+                                    <p class="text-xs text-gray-500">M.Sc, B.Ed | 15+ Years</p>
+                                    <p class="text-xs text-gray-500 mb-2">1000+ Students</p>
+                                    <span class="bg-gray-200 text-gray-700 text-xs font-semibold px-3 py-1 rounded-full">English</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Add more teacher cards as needed -->
+                    </div>
+                </div>
+            </section>
+
+            <!-- =============================================== -->
+            <!-- WEBINAR SECTION                                 -->
+            <!-- =============================================== -->
+            <section class="pb-20 gradient-section pt-5">
+                <div class="container mx-auto px-4 lg:px-8">
+                    <!-- Section Header -->
+                    <div class="flex items-center justify-center mb-12">
+                        <div class="flex-grow border-t-2 border-dashed border-purple-300"></div>
+                        <h2 class="text-2xl md:text-3xl font-bold mx-4 sm:mx-6 text-center whitespace-nowrap">Webinar starting within 24 hrs</h2>
+                        <div class="flex-grow border-t-2 border-dashed border-purple-300"></div>
+                    </div>
+                    <!-- Carousel Wrapper -->
+                    <div class="relative">
+                        <div id="webinar-carousel" class="flex overflow-x-auto space-x-8 pl-4 pr-16 pb-4 no-scrollbar smooth-scroll">
+                    
+                            <!-- webinar card structure 1 -->
+                         <div class="flex-shrink-0 w-80 bg-white rounded-2xl shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300">
+                            <div class="relative">
+                                <img src="./assets/learningROBOTICS.jpg" alt="Robotics Course" class="w-full h-40 object-cover" onerror="this.onerror=null;this.src='https://placehold.co/600x400/E9D8FD/6B46C1?text=Robotics';">
+                                <div class="absolute top-2 left-2 bg-yellow-400 text-gray-800 text-xs font-bold px-2 py-1 rounded-md">Selling Fast</div>
+                                <div class="absolute top-2 right-2 bg-black/30 text-white text-xs px-2 py-1 rounded-full">⭐ 4.9 | 300+ learners</div>
+                            </div>
+                            <div class="p-4">
+                                <div class="flex space-x-2 mb-2">
+                                    <span class="bg-purple-100 text-purple-700 text-xs font-semibold px-2.5 py-1 rounded-full">English</span>
+                                    <span class="bg-green-100 text-green-700 text-xs font-semibold px-2.5 py-1 rounded-full">Intermediate</span>
+                                    <span class="bg-pink-100 text-pink-700 text-xs font-semibold px-2.5 py-1 rounded-full">4 classes</span>
+                                </div>
+                                <h3 class="font-bold text-lg mb-1">Summer robotics camp: fun projects with auto arduino, Tink...</h3>
+                                <div class=" flex flex-row">
+                                    <img src="./assets/daniel.png" class="w-6 h-6 rounded-full mr-2">
+                                <p class="text-sm text-gray-500 mb-3">By: Daniel James</p>
+                                </div>
+
+                                <div class="flex justify-between items-center text-sm ">
+                                                <div class="flex items-center gap-4 font-medium text-base">
+                                                <span class="flex items-center"><img src="./assets/person.svg" class="w-4 h-4 mr-1"> 7-10 yrs</span>
+                                                <span class="flex items-center"><img src="./assets/clock.svg" class="w-4 h-4 mr-1"> 45</span>
+                                                <span class="flex items-center "><img src="./assets/Rupee.svg" class="w-4 h-4 mr-1">299</span>
+                                                </div>    
+                                                    <button class="p-1 rounded-full bg-gray-100 transition">
+                                                        <img src="./assets/cart.svg" class="w-8 h-8 ">
+                                                    </button>
+                                                </div>
+                                
+                                            </div>
+                                        </div>
+
+
+                        <!-- webinar card structure 2 -->
+                         <div class="flex-shrink-0 w-80 bg-white rounded-2xl shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300">
+                            <div class="relative">
+                                <img src="./assets/learningROBOTICS.jpg" alt="Robotics Course" class="w-full h-40 object-cover" onerror="this.onerror=null;this.src='https://placehold.co/600x400/E9D8FD/6B46C1?text=Robotics';">
+                                <div class="absolute top-2 left-2 bg-yellow-400 text-gray-800 text-xs font-bold px-2 py-1 rounded-md">Selling Fast</div>
+                                <div class="absolute top-2 right-2 bg-black/30 text-white text-xs px-2 py-1 rounded-full">⭐ 4.9 | 300+ learners</div>
+                            </div>
+                            <div class="p-4">
+                                <div class="flex space-x-2 mb-2">
+                                    <span class="bg-purple-100 text-purple-700 text-xs font-semibold px-2.5 py-1 rounded-full">English</span>
+                                    <span class="bg-green-100 text-green-700 text-xs font-semibold px-2.5 py-1 rounded-full">Intermediate</span>
+                                    <span class="bg-pink-100 text-pink-700 text-xs font-semibold px-2.5 py-1 rounded-full">4 classes</span>
+                                </div>
+                                <h3 class="font-bold text-lg mb-1">Summer robotics camp: fun projects with auto arduino, Tink...</h3>
+                                <div class=" flex flex-row">
+                                    <img src="./assets/daniel.png" class="w-6 h-6 rounded-full mr-2">
+                                <p class="text-sm text-gray-500 mb-3">By: Daniel James</p>
+                                </div>
+
+                                <div class="flex justify-between items-center text-sm ">
+                                                <div class="flex items-center gap-4 font-medium text-base">
+                                                <span class="flex items-center"><img src="./assets/person.svg" class="w-4 h-4 mr-1"> 7-10 yrs</span>
+                                                <span class="flex items-center"><img src="./assets/clock.svg" class="w-4 h-4 mr-1"> 45</span>
+                                                <span class="flex items-center "><img src="./assets/Rupee.svg" class="w-4 h-4 mr-1">299</span>
+                                                </div>    
+                                                    <button class="p-1 rounded-full bg-gray-100 transition">
+                                                        <img src="./assets/cart.svg" class="w-8 h-8 ">
+                                                    </button>
+                                                </div>
+                                
+                            </div>
+                        </div>
+
+
+                        <!-- webinar card structure 3 -->
+                         <div class="flex-shrink-0 w-80 bg-white rounded-2xl shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300">
+                            <div class="relative">
+                                <img src="./assets/learningROBOTICS.jpg" alt="Robotics Course" class="w-full h-40 object-cover" onerror="this.onerror=null;this.src='https://placehold.co/600x400/E9D8FD/6B46C1?text=Robotics';">
+                                <div class="absolute top-2 left-2 bg-yellow-400 text-gray-800 text-xs font-bold px-2 py-1 rounded-md">Selling Fast</div>
+                                <div class="absolute top-2 right-2 bg-black/30 text-white text-xs px-2 py-1 rounded-full">⭐ 4.9 | 300+ learners</div>
+                            </div>
+                            <div class="p-4">
+                                <div class="flex space-x-2 mb-2">
+                                    <span class="bg-purple-100 text-purple-700 text-xs font-semibold px-2.5 py-1 rounded-full">English</span>
+                                    <span class="bg-green-100 text-green-700 text-xs font-semibold px-2.5 py-1 rounded-full">Intermediate</span>
+                                    <span class="bg-pink-100 text-pink-700 text-xs font-semibold px-2.5 py-1 rounded-full">4 classes</span>
+                                </div>
+                                <h3 class="font-bold text-lg mb-1">Summer robotics camp: fun projects with auto arduino, Tink...</h3>
+                                <div class=" flex flex-row">
+                                    <img src="./assets/daniel.png" class="w-6 h-6 rounded-full mr-2">
+                                <p class="text-sm text-gray-500 mb-3">By: Daniel James</p>
+                                </div>
+
+                                <div class="flex justify-between items-center text-sm ">
+                                                <div class="flex items-center gap-4 font-medium text-base">
+                                                <span class="flex items-center"><img src="./assets/person.svg" class="w-4 h-4 mr-1"> 7-10 yrs</span>
+                                                <span class="flex items-center"><img src="./assets/clock.svg" class="w-4 h-4 mr-1"> 45</span>
+                                                <span class="flex items-center "><img src="./assets/Rupee.svg" class="w-4 h-4 mr-1">299</span>
+                                                </div>    
+                                                    <button class="p-1 rounded-full bg-gray-100 transition">
+                                                        <img src="./assets/cart.svg" class="w-8 h-8 ">
+                                                    </button>
+                                                </div>
+                                
+                            </div>
+                        </div>
+
+                        <!-- webinar card structure 4 -->
+                         <div class="flex-shrink-0 w-80 bg-white rounded-2xl shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300">
+                            <div class="relative">
+                                <img src="./assets/learningROBOTICS.jpg" alt="Robotics Course" class="w-full h-40 object-cover" onerror="this.onerror=null;this.src='https://placehold.co/600x400/E9D8FD/6B46C1?text=Robotics';">
+                                <div class="absolute top-2 left-2 bg-yellow-400 text-gray-800 text-xs font-bold px-2 py-1 rounded-md">Selling Fast</div>
+                                <div class="absolute top-2 right-2 bg-black/30 text-white text-xs px-2 py-1 rounded-full">⭐ 4.9 | 300+ learners</div>
+                            </div>
+                            <div class="p-4">
+                                <div class="flex space-x-2 mb-2">
+                                    <span class="bg-purple-100 text-purple-700 text-xs font-semibold px-2.5 py-1 rounded-full">English</span>
+                                    <span class="bg-green-100 text-green-700 text-xs font-semibold px-2.5 py-1 rounded-full">Intermediate</span>
+                                    <span class="bg-pink-100 text-pink-700 text-xs font-semibold px-2.5 py-1 rounded-full">4 classes</span>
+                                </div>
+                                <h3 class="font-bold text-lg mb-1">Summer robotics camp: fun projects with auto arduino, Tink...</h3>
+                                <div class=" flex flex-row">
+                                    <img src="./assets/daniel.png" class="w-6 h-6 rounded-full mr-2">
+                                <p class="text-sm text-gray-500 mb-3">By: Daniel James</p>
+                                </div>
+
+                                <div class="flex justify-between items-center text-sm ">
+                                                <div class="flex items-center gap-4 font-medium text-base">
+                                                <span class="flex items-center"><img src="./assets/person.svg" class="w-4 h-4 mr-1"> 7-10 yrs</span>
+                                                <span class="flex items-center"><img src="./assets/clock.svg" class="w-4 h-4 mr-1"> 45</span>
+                                                <span class="flex items-center "><img src="./assets/Rupee.svg" class="w-4 h-4 mr-1">299</span>
+                                                </div>    
+                                                    <button class="p-1 rounded-full bg-gray-100 transition">
+                                                        <img src="./assets/cart.svg" class="w-8 h-8 ">
+                                                    </button>
+                                                </div>
+                                
+                            </div>
+                        </div>
+
+                        <!-- webinar card structure 5 -->
+                         <div class="flex-shrink-0 w-80 bg-white rounded-2xl shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300">
+                            <div class="relative">
+                                <img src="./assets/learningROBOTICS.jpg" alt="Robotics Course" class="w-full h-40 object-cover" onerror="this.onerror=null;this.src='https://placehold.co/600x400/E9D8FD/6B46C1?text=Robotics';">
+                                <div class="absolute top-2 left-2 bg-yellow-400 text-gray-800 text-xs font-bold px-2 py-1 rounded-md">Selling Fast</div>
+                                <div class="absolute top-2 right-2 bg-black/30 text-white text-xs px-2 py-1 rounded-full">⭐ 4.9 | 300+ learners</div>
+                            </div>
+                            <div class="p-4">
+                                <div class="flex space-x-2 mb-2">
+                                    <span class="bg-purple-100 text-purple-700 text-xs font-semibold px-2.5 py-1 rounded-full">English</span>
+                                    <span class="bg-green-100 text-green-700 text-xs font-semibold px-2.5 py-1 rounded-full">Intermediate</span>
+                                    <span class="bg-pink-100 text-pink-700 text-xs font-semibold px-2.5 py-1 rounded-full">4 classes</span>
+                                </div>
+                                <h3 class="font-bold text-lg mb-1">Summer robotics camp: fun projects with auto arduino, Tink...</h3>
+                                <div class=" flex flex-row">
+                                    <img src="./assets/daniel.png" class="w-6 h-6 rounded-full mr-2">
+                                <p class="text-sm text-gray-500 mb-3">By: Daniel James</p>
+                                </div>
+
+                                <div class="flex justify-between items-center text-sm ">
+                                                <div class="flex items-center gap-4 font-medium text-base">
+                                                <span class="flex items-center"><img src="./assets/person.svg" class="w-4 h-4 mr-1"> 7-10 yrs</span>
+                                                <span class="flex items-center"><img src="./assets/clock.svg" class="w-4 h-4 mr-1"> 45</span>
+                                                <span class="flex items-center "><img src="./assets/Rupee.svg" class="w-4 h-4 mr-1">299</span>
+                                                </div>    
+                                                    <button class="p-1 rounded-full bg-gray-100 transition">
+                                                        <img src="./assets/cart.svg" class="w-8 h-8 ">
+                                                    </button>
+                                                </div>
+                                
+                            </div>
+                        </div>
+                            <!-- Add more webinar cards here -->
+                        </div>
+                        <!-- Right Arrow Button -->
+                        <button id="webinar-next" class="absolute top-1/2 right-0 transform -translate-y-1/2 bg-white rounded-full w-12 h-12 flex items-center justify-center shadow-lg z-10 hover:bg-gray-100 transition">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-700" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+                        </button>
+                        <!-- Fade out effect -->
+                        <div class="absolute top-0 right-0 h-full w-24 bg-gradient-to-l from-white to-transparent pointer-events-none"></div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- =============================================== -->
+            <!-- POPULAR CATEGORIES SECTION                      -->
+            <!-- =============================================== -->
+            <section class="pb-20 pt-5">
+                <div class="container mx-auto px-4 lg:px-8">
+                    <div class="text-center mb-12">
+                        <h2 class="text-3xl md:text-4xl font-bold mb-4">Popular Categories</h2>
+                        <p class="text-gray-600">Pick what you love most! These categories have everything you need to learn something awesome ✨</p>
+                    </div>
+                    <div id="popular-categories" class="flex justify-center flex-wrap gap-4 md:gap-8">
+                        <button data-category="coding" class="category-filter active coding flex items-center bg-white rounded-lg p-4 shadow-md w-60 h-24">
+                            <img src="./assets/laptop_figure.svg" alt="Coding" class="w-20 h-20 object-contain" onerror="this.onerror=null;this.src='https://placehold.co/80x80/FFFFFF/000000?text=💻';">
+                            <span class="font-semibold text-lg ml-4 category-text">Coding</span>
+                        </button>
+                         <button data-category="speaking" class="category-filter flex items-center bg-white rounded-lg p-4 shadow-md w-60 h-24">
+                            <span class="font-semibold text-lg mr-4 text-left category-text">Public<br>speaking</span>
+                            <img src="./assets/mic_figure.svg" alt="Public Speaking" class="w-20 h-20 object-contain" onerror="this.onerror=null;this.src='https://placehold.co/80x80/FFFFFF/000000?text=🎤';">
+                        </button>
+                        <button data-category="chess" class="category-filter flex items-center bg-white rounded-lg p-4 shadow-md w-60 h-24">
+                            <span class="font-semibold text-lg mr-4 category-text">Chess</span>
+                            <img src="./assets/horse_figure.svg" alt="Chess" class="w-20 h-20 object-contain" onerror="this.onerror=null;this.src='https://placehold.co/80x80/FFFFFF/000000?text=♟️';">
+                        </button>
+                        <button data-category="homework" class="category-filter flex items-center bg-white rounded-lg p-4 shadow-md w-60 h-24">
+                             <span class="font-semibold text-lg mr-4 text-left category-text">Home<br>work help</span>
+                            <img src="./assets/book_figure.svg" alt="Homework help" class="w-20 h-20 object-contain" onerror="this.onerror=null;this.src='https://placehold.co/80x80/FFFFFF/000000?text=📚';">
+                        </button>
+                        <button data-category="app" class="category-filter flex items-center bg-white rounded-lg p-4 shadow-md w-60 h-24">
+                            <span class="font-semibold text-lg mr-4 text-left category-text">App<br>building</span>
+                            <img src="./assets/mobile_figure.svg" alt="App building" class="w-20 h-20 object-contain" onerror="this.onerror=null;this.src='https://placehold.co/80x80/FFFFFF/000000?text=📱';">
+                        </button>
+                    </div>
+
+                    <!-- Course Carousel for Categories -->
+                     <div class="relative">
+                    <div id="category-courses-carousel" class="flex overflow-x-auto space-x-8 pb-4 mt-12 no-scrollbar smooth-scroll">
+
+                        <!-- testing success -->
+                            <!-- Course Card 1 -->
+                             <!-- to access category wise implement below code -->
+                              <!-- add category-course-card and data-category="coding" in class -->
+                                    <div class="flex-shrink-0 w-80 bg-white rounded-2xl shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300">
+                                        <div class="relative">
+                                            <img src="./assets/learningROBOTICS.jpg" alt="Robotics Course" class="w-full h-40 object-cover" onerror="this.onerror=null;this.src='https://placehold.co/600x400/E9D8FD/6B46C1?text=Robotics';">
+                                            <div class="absolute top-2 left-2 bg-yellow-400 text-gray-800 text-xs font-bold px-2 py-1 rounded-md">Selling Fast</div>
+                                            <div class="absolute top-2 right-2 bg-black/30 text-white text-xs px-2 py-1 rounded-full">⭐ 4.9 | 200+ learners</div>
+                                        </div>
+                                        <div class="p-4">
+                                            <div class="flex space-x-2 mb-2">
+                                                <span class="bg-purple-100 text-purple-700 text-xs font-semibold px-2.5 py-1 rounded-full">English</span>
+                                                <span class="bg-green-100 text-green-700 text-xs font-semibold px-2.5 py-1 rounded-full">Intermediate</span>
+                                                <span class="bg-pink-100 text-pink-700 text-xs font-semibold px-2.5 py-1 rounded-full">4 classes</span>
+                                            </div>
+                                            <h3 class="font-bold text-lg mb-1">Summer robotics camp: fun projects with auto arduino, Tink...</h3>
+                                            <p class="text-sm text-gray-500 mb-3">Build circuits & smart projects like alarms, weather stations, etc</p>
+                                            <div class="flex justify-between items-center text-sm ">
+                                                <div class="flex items-center gap-4 font-medium text-base">
+                                                <span class="flex items-center"><img src="./assets/person.svg" class="w-4 h-4 mr-1"> 7-10 yrs</span>
+                                                <span class="flex items-center"><img src="./assets/clock.svg" class="w-4 h-4 mr-1"> 45</span>
+                                                <span class="flex items-center "><img src="./assets/Rupee.svg" class="w-4 h-4 mr-1">299</span>
+                                                </div>    
+                                                    <button class="p-1 rounded-full bg-gray-100 transition">
+                                                        <img src="./assets/cart.svg" class="w-8 h-8 ">
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                        <!-- testing success -->
+                        <!-- Course Card: Public Speaking -->
+                        <!-- testing success2 -->
+                            <!-- Course Card 2 -->
+                             <!-- to access category wise implement below code -->
+                              <!-- add category-course-card and data-category="coding" in class -->
+                                    <div class="flex-shrink-0 w-80 bg-white rounded-2xl shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300">
+                                        <div class="relative">
+                                            <img src="./assets/learningROBOTICS.jpg" alt="Robotics Course" class="w-full h-40 object-cover" onerror="this.onerror=null;this.src='https://placehold.co/600x400/E9D8FD/6B46C1?text=Robotics';">
+                                            <div class="absolute top-2 left-2 bg-yellow-400 text-gray-800 text-xs font-bold px-2 py-1 rounded-md">Selling Fast</div>
+                                            <div class="absolute top-2 right-2 bg-black/30 text-white text-xs px-2 py-1 rounded-full">⭐ 4.9 | 200+ learners</div>
+                                        </div>
+                                        <div class="p-4">
+                                            <div class="flex space-x-2 mb-2">
+                                                <span class="bg-purple-100 text-purple-700 text-xs font-semibold px-2.5 py-1 rounded-full">English</span>
+                                                <span class="bg-green-100 text-green-700 text-xs font-semibold px-2.5 py-1 rounded-full">Intermediate</span>
+                                                <span class="bg-pink-100 text-pink-700 text-xs font-semibold px-2.5 py-1 rounded-full">4 classes</span>
+                                            </div>
+                                            <h3 class="font-bold text-lg mb-1">Summer robotics camp: fun projects with auto arduino, Tink...</h3>
+                                            <p class="text-sm text-gray-500 mb-3">Build circuits & smart projects like alarms, weather stations, etc</p>
+                                            <div class="flex justify-between items-center text-sm ">
+                                                <div class="flex items-center gap-4 font-medium text-base">
+                                                <span class="flex items-center"><img src="./assets/person.svg" class="w-4 h-4 mr-1"> 7-10 yrs</span>
+                                                <span class="flex items-center"><img src="./assets/clock.svg" class="w-4 h-4 mr-1"> 45</span>
+                                                <span class="flex items-center "><img src="./assets/Rupee.svg" class="w-4 h-4 mr-1">299</span>
+                                                </div>    
+                                                    <button class="p-1 rounded-full bg-gray-100 transition">
+                                                        <img src="./assets/cart.svg" class="w-8 h-8 ">
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                        <!-- testing success2 -->
+
+                        <!-- testing success3 -->
+                            <!-- Course Card 3 -->
+                             <!-- to access category wise implement below code -->
+                              <!-- add category-course-card and data-category="coding" in class -->
+                                    <div class="flex-shrink-0 w-80 bg-white rounded-2xl shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300">
+                                        <div class="relative">
+                                            <img src="./assets/learningROBOTICS.jpg" alt="Robotics Course" class="w-full h-40 object-cover" onerror="this.onerror=null;this.src='https://placehold.co/600x400/E9D8FD/6B46C1?text=Robotics';">
+                                            <div class="absolute top-2 left-2 bg-yellow-400 text-gray-800 text-xs font-bold px-2 py-1 rounded-md">Selling Fast</div>
+                                            <div class="absolute top-2 right-2 bg-black/30 text-white text-xs px-2 py-1 rounded-full">⭐ 4.9 | 200+ learners</div>
+                                        </div>
+                                        <div class="p-4">
+                                            <div class="flex space-x-2 mb-2">
+                                                <span class="bg-purple-100 text-purple-700 text-xs font-semibold px-2.5 py-1 rounded-full">English</span>
+                                                <span class="bg-green-100 text-green-700 text-xs font-semibold px-2.5 py-1 rounded-full">Intermediate</span>
+                                                <span class="bg-pink-100 text-pink-700 text-xs font-semibold px-2.5 py-1 rounded-full">4 classes</span>
+                                            </div>
+                                            <h3 class="font-bold text-lg mb-1">Summer robotics camp: fun projects with auto arduino, Tink...</h3>
+                                            <p class="text-sm text-gray-500 mb-3">Build circuits & smart projects like alarms, weather stations, etc</p>
+                                            <div class="flex justify-between items-center text-sm ">
+                                                <div class="flex items-center gap-4 font-medium text-base">
+                                                <span class="flex items-center"><img src="./assets/person.svg" class="w-4 h-4 mr-1"> 7-10 yrs</span>
+                                                <span class="flex items-center"><img src="./assets/clock.svg" class="w-4 h-4 mr-1"> 45</span>
+                                                <span class="flex items-center "><img src="./assets/Rupee.svg" class="w-4 h-4 mr-1">299</span>
+                                                </div>    
+                                                    <button class="p-1 rounded-full bg-gray-100 transition">
+                                                        <img src="./assets/cart.svg" class="w-8 h-8 ">
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                        <!-- testing success3 -->
+
+                         <!-- testing success4 -->
+                            <!-- Course Card 4 -->
+                             <!-- to access category wise implement below code -->
+                              <!-- add category-course-card and data-category="coding" in class -->
+                                    <div class="flex-shrink-0 w-80 bg-white rounded-2xl shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300">
+                                        <div class="relative">
+                                            <img src="./assets/learningROBOTICS.jpg" alt="Robotics Course" class="w-full h-40 object-cover" onerror="this.onerror=null;this.src='https://placehold.co/600x400/E9D8FD/6B46C1?text=Robotics';">
+                                            <div class="absolute top-2 left-2 bg-yellow-400 text-gray-800 text-xs font-bold px-2 py-1 rounded-md">Selling Fast</div>
+                                            <div class="absolute top-2 right-2 bg-black/30 text-white text-xs px-2 py-1 rounded-full">⭐ 4.9 | 200+ learners</div>
+                                        </div>
+                                        <div class="p-4">
+                                            <div class="flex space-x-2 mb-2">
+                                                <span class="bg-purple-100 text-purple-700 text-xs font-semibold px-2.5 py-1 rounded-full">English</span>
+                                                <span class="bg-green-100 text-green-700 text-xs font-semibold px-2.5 py-1 rounded-full">Intermediate</span>
+                                                <span class="bg-pink-100 text-pink-700 text-xs font-semibold px-2.5 py-1 rounded-full">4 classes</span>
+                                            </div>
+                                            <h3 class="font-bold text-lg mb-1">Summer robotics camp: fun projects with auto arduino, Tink...</h3>
+                                            <p class="text-sm text-gray-500 mb-3">Build circuits & smart projects like alarms, weather stations, etc</p>
+                                            <div class="flex justify-between items-center text-sm ">
+                                                <div class="flex items-center gap-4 font-medium text-base">
+                                                <span class="flex items-center"><img src="./assets/person.svg" class="w-4 h-4 mr-1"> 7-10 yrs</span>
+                                                <span class="flex items-center"><img src="./assets/clock.svg" class="w-4 h-4 mr-1"> 45</span>
+                                                <span class="flex items-center "><img src="./assets/Rupee.svg" class="w-4 h-4 mr-1">299</span>
+                                                </div>    
+                                                    <button class="p-1 rounded-full bg-gray-100 transition">
+                                                        <img src="./assets/cart.svg" class="w-8 h-8 ">
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                        <!-- testing success4 -->
+
+                        <!-- testing success 5 -->
+                            <!-- Course Card 5-->
+                             <!-- to access category wise implement below code -->
+                              <!-- add category-course-card and data-category="coding" in class -->
+                                    <div class="flex-shrink-0 w-80 bg-white rounded-2xl shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300">
+                                        <div class="relative">
+                                            <img src="./assets/learningROBOTICS.jpg" alt="Robotics Course" class="w-full h-40 object-cover" onerror="this.onerror=null;this.src='https://placehold.co/600x400/E9D8FD/6B46C1?text=Robotics';">
+                                            <div class="absolute top-2 left-2 bg-yellow-400 text-gray-800 text-xs font-bold px-2 py-1 rounded-md">Selling Fast</div>
+                                            <div class="absolute top-2 right-2 bg-black/30 text-white text-xs px-2 py-1 rounded-full">⭐ 4.9 | 200+ learners</div>
+                                        </div>
+                                        <div class="p-4">
+                                            <div class="flex space-x-2 mb-2">
+                                                <span class="bg-purple-100 text-purple-700 text-xs font-semibold px-2.5 py-1 rounded-full">English</span>
+                                                <span class="bg-green-100 text-green-700 text-xs font-semibold px-2.5 py-1 rounded-full">Intermediate</span>
+                                                <span class="bg-pink-100 text-pink-700 text-xs font-semibold px-2.5 py-1 rounded-full">4 classes</span>
+                                            </div>
+                                            <h3 class="font-bold text-lg mb-1">Summer robotics camp: fun projects with auto arduino, Tink...</h3>
+                                            <p class="text-sm text-gray-500 mb-3">Build circuits & smart projects like alarms, weather stations, etc</p>
+                                            <div class="flex justify-between items-center text-sm ">
+                                                <div class="flex items-center gap-4 font-medium text-base">
+                                                <span class="flex items-center"><img src="./assets/person.svg" class="w-4 h-4 mr-1"> 7-10 yrs</span>
+                                                <span class="flex items-center"><img src="./assets/clock.svg" class="w-4 h-4 mr-1"> 45</span>
+                                                <span class="flex items-center "><img src="./assets/Rupee.svg" class="w-4 h-4 mr-1">299</span>
+                                                </div>    
+                                                    <button class="p-1 rounded-full bg-gray-100 transition">
+                                                        <img src="./assets/cart.svg" class="w-8 h-8 ">
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                        <!-- testing success 5 -->
+                        <!-- Add more course cards for other categories -->
+                    </div>
+                    <button id="featured-courses-next" class="absolute top-1/2 right-0 transform -translate-y-1/2 bg-white rounded-full w-12 h-12 flex items-center justify-center shadow-lg z-10 hover:bg-gray-100 transition">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-700" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+                        </button>
+                        <div class="absolute top-0 right-0 h-full w-24 bg-gradient-to-l from-white to-transparent pointer-events-none"></div>
+                        </div>
+                </div>
+            </section>
+            
+            <!-- =============================================== -->
+            <!-- FILTER WITH TIME SECTION                        -->
+            <!-- =============================================== -->
+             <!-- testing -->
+            <section class="pb-20">
+                <div class="container mx-auto px-4 lg:px-8">
+                     <div class="text-center mb-12">
+                        <h2 class="text-3xl md:text-4xl font-bold mb-4">Filter with Time</h2>
+                        <p class="text-gray-600">Choose the perfect time that fits your child's schedule</p>
+                    </div>
+                    <!-- Time Filters -->
+                    <div id="time-filters" class="flex justify-center flex-wrap gap-4 md:gap-8 mb-12">
+                        <button data-time="morning" class="time-filter active flex items-center bg-white rounded-lg p-4 shadow-md border-2 border-transparent">
+                            <div>
+                                <p class="font-bold">Morning classes</p>
+                                <p class="text-sm text-gray-500">8am - 12pm</p>
+                            </div>
+                            <div class="ml-4 text-yellow-500">
+                                <img src="./assets/Sun1.svg" alt="Full Sun" class="h-8 w-8 icon-active" onerror="this.onerror=null;this.src='https://placehold.co/32x32/FFFFFF/000000?text=☀️';">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 icon-inactive" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" /></svg>
+                            </div>
+                        </button>
+                        <button data-time="afternoon" class="time-filter flex items-center bg-white rounded-lg p-4 shadow-md border-2 border-transparent">
+                            <div>
+                                <p class="font-bold">Afternoon classes</p>
+                                <p class="text-sm text-gray-500">12pm - 4pm</p>
+                            </div>
+                             <div class="ml-4 text-yellow-500">
+                                <img src="./assets/sun2.svg" alt="Full Sun" class="h-8 w-8 icon-active" onerror="this.onerror=null;this.src='https://placehold.co/32x32/FFFFFF/000000?text=☀️';">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 icon-inactive" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" /></svg>
+                            </div>
+                        </button>
+                        <button data-time="evening" class="time-filter flex items-center bg-white rounded-lg p-4 shadow-md border-2 border-transparent">
+                            <div>
+                                <p class="font-bold">Evening classes</p>
+                                <p class="text-sm text-gray-500">4pm - 8pm</p>
+                            </div>
+                            <div class="ml-4 text-indigo-500">
+                                <img src="./assets/moon1.svg" alt="Full moon" class="h-8 w-8 icon-active" onerror="this.onerror=null;this.src='https://placehold.co/32x32/FFFFFF/000000?text=🌙';">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 icon-inactive" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" /></svg>
+                            </div>
+                        </button>
+                        <button data-time="late" class="time-filter flex items-center bg-white rounded-lg p-4 shadow-md border-2 border-transparent">
+                            <div>
+                                <p class="font-bold">Late evening classes</p>
+                                <p class="text-sm text-gray-500">8pm - 11pm</p>
+                            </div>
+                             <div class="ml-4 text-indigo-500">
+                                <img src="./assets/moon2.svg" alt="Full moon" class="h-8 w-8 icon-active" onerror="this.onerror=null;this.src='https://placehold.co/32x32/FFFFFF/000000?text=🌙';">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 icon-inactive" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" /></svg>
+                            </div>
+                        </button>
+                    </div>
+                    <!-- Course Carousel for Time -->
+                     <div id="time-courses-carousel" class="flex overflow-x-auto space-x-8 pb-4 no-scrollbar">
+
+                        <!-- Course Card: Morning 1 -->
+                        <div class="time-course-card flex-shrink-0 w-full max-w-4xl bg-white rounded-2xl shadow-lg p-4 flex items-center space-x-4" data-time="morning">
+                            <div class="relative w-1/3">
+                                <img src="./assets/learningROBOTICS.jpg" alt="Robotics Course" class="rounded-lg w-full h-full object-cover">
+                                <div class="absolute top-2 left-2 bg-yellow-400 text-gray-800 text-xs font-bold px-3 py-1 rounded-md">Selling Fast</div>
+                            </div>
+                            <div class="w-2/3 flex flex-col justify-between self-stretch">
+                                <div class="flex space-x-2">
+                                    <span class="border border-gray-300 border-[#E3E020] bg-[#FFFEDF] text-gray-600 text-xs font-semibold px-2.5 py-1 rounded-full">English</span>
+                                    <span class="border border-gray-300 border-[#FFAFB3] bg-[#FFEFF0] text-gray-600 text-xs font-semibold px-2.5 py-1 rounded-full">Intermediate</span>
+                                    <span class="border border-gray-300 border-[#5EC4FE] bg-[#ECF9FF] text-gray-600 text-xs font-semibold px-2.5 py-1 rounded-full">Morning class</span>
+                                </div>
+                                <h3 class="font-bold text-lg">Summer robotics camp: fun projects with auto arduino, Tinker cad coding and 3d printing</h3>
+                                <div class="flex items-center text-sm text-gray-500">
+                                    <img src="./assets/daniel.png" class="w-6 h-6 rounded-full mr-2">
+                                    <span>By: Daniel James</span>
+                                    <span class="ml-2">⭐ 4.9 | 200+ learners</span>
+                                </div>
+                                <div class="flex justify-between items-center pt-2">
+                                    <div class="flex items-center gap-4 font-medium text-base">
+                                        <span class="flex items-center"><img src="./assets/person.svg" class="w-4 h-4 mr-1"> 7-10 yrs</span>
+                                        <span class="flex items-center"><img src="./assets/clock.svg" class="w-4 h-4 mr-1"> 45</span>
+                                        <span class="flex items-center text-black"><img src="./assets/Rupee.svg" class="w-4 h-4 mr-1">299</span>
+                                    </div>
+                                    <button class="p-1 rounded-full bg-gray-100 transition hover:bg-gray-200">
+                                        <img src="./assets/cart.svg" class="w-8 h-8">
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Course Card: Morning 2 -->
+                        <div class="time-course-card flex-shrink-0 w-full max-w-4xl bg-white rounded-2xl shadow-lg p-4 flex items-center space-x-4" data-time="morning">
+                            <div class="relative w-1/3">
+                                <img src="./assets/learningROBOTICS.jpg" alt="Robotics Course" class="rounded-lg w-full h-full object-cover">
+                                <div class="absolute top-2 left-2 bg-yellow-400 text-gray-800 text-xs font-bold px-3 py-1 rounded-md">Selling Fast</div>
+                            </div>
+                            <div class="w-2/3 flex flex-col justify-between self-stretch">
+                                <div class="flex space-x-2">
+                                    <span class="border border-gray-300 border-[#E3E020] bg-[#FFFEDF] text-gray-600 text-xs font-semibold px-2.5 py-1 rounded-full">English</span>
+                                    <span class="border border-gray-300 border-[#FFAFB3] bg-[#FFEFF0] text-gray-600 text-xs font-semibold px-2.5 py-1 rounded-full">Intermediate</span>
+                                    <span class="border border-gray-300 border-[#5EC4FE] bg-[#ECF9FF] text-gray-600 text-xs font-semibold px-2.5 py-1 rounded-full">Morning class</span>
+                                </div>
+                                <h3 class="font-bold text-lg">Summer robotics camp: fun projects with auto arduino, Tinker cad coding and 3d printing</h3>
+                                <div class="flex items-center text-sm text-gray-500">
+                                    <img src="./assets/daniel.png" class="w-6 h-6 rounded-full mr-2">
+                                    <span>By: Daniel James</span>
+                                    <span class="ml-2">⭐ 4.9 | 200+ learners</span>
+                                </div>
+                                <div class="flex justify-between items-center pt-2">
+                                    <div class="flex items-center gap-4 font-medium text-base">
+                                        <span class="flex items-center"><img src="./assets/person.svg" class="w-4 h-4 mr-1"> 7-10 yrs</span>
+                                        <span class="flex items-center"><img src="./assets/clock.svg" class="w-4 h-4 mr-1"> 45</span>
+                                        <span class="flex items-center text-black"><img src="./assets/Rupee.svg" class="w-4 h-4 mr-1">299</span>
+                                    </div>
+                                    <button class="p-1 rounded-full bg-gray-100 transition hover:bg-gray-200">
+                                        <img src="./assets/cart.svg" class="w-8 h-8">
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                         <!-- Course Card: Afternoon -->
+
+                        <!-- Course Card: Morning 2 -->
+                        <div class="time-course-card flex-shrink-0 w-full max-w-4xl bg-white rounded-2xl shadow-lg p-4 flex items-center space-x-4" data-time="morning">
+                            <div class="relative w-1/3">
+                                <img src="./assets/learningROBOTICS.jpg" alt="Robotics Course" class="rounded-lg w-full h-full object-cover">
+                                <div class="absolute top-2 left-2 bg-yellow-400 text-gray-800 text-xs font-bold px-3 py-1 rounded-md">Selling Fast</div>
+                            </div>
+                            <div class="w-2/3 flex flex-col justify-between self-stretch">
+                                <div class="flex space-x-2">
+                                    <span class="border border-gray-300 border-[#E3E020] bg-[#FFFEDF] text-gray-600 text-xs font-semibold px-2.5 py-1 rounded-full">English</span>
+                                    <span class="border border-gray-300 border-[#FFAFB3] bg-[#FFEFF0] text-gray-600 text-xs font-semibold px-2.5 py-1 rounded-full">Intermediate</span>
+                                    <span class="border border-gray-300 border-[#5EC4FE] bg-[#ECF9FF] text-gray-600 text-xs font-semibold px-2.5 py-1 rounded-full">Morning class</span>
+                                </div>
+                                <h3 class="font-bold text-lg">Summer robotics camp: fun projects with auto arduino, Tinker cad coding and 3d printing</h3>
+                                <div class="flex items-center text-sm text-gray-500">
+                                    <img src="./assets/daniel.png" class="w-6 h-6 rounded-full mr-2">
+                                    <span>By: Daniel James</span>
+                                    <span class="ml-2">⭐ 4.9 | 200+ learners</span>
+                                </div>
+                                <div class="flex justify-between items-center pt-2">
+                                    <div class="flex items-center gap-4 font-medium text-base">
+                                        <span class="flex items-center"><img src="./assets/person.svg" class="w-4 h-4 mr-1"> 7-10 yrs</span>
+                                        <span class="flex items-center"><img src="./assets/clock.svg" class="w-4 h-4 mr-1"> 45</span>
+                                        <span class="flex items-center text-black"><img src="./assets/Rupee.svg" class="w-4 h-4 mr-1">299</span>
+                                    </div>
+                                    <button class="p-1 rounded-full bg-gray-100 transition hover:bg-gray-200">
+                                        <img src="./assets/cart.svg" class="w-8 h-8">
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                     </div>
+                </div>
+            </section>
+            <!-- testing -->
+        </div>
+    </main>
+
+    <!-- =============================================== -->
+    <!-- JAVASCRIPT                                      -->
+    <!-- =============================================== -->
+    <script src="script.js"></script>
+
+</body>
+</html>
